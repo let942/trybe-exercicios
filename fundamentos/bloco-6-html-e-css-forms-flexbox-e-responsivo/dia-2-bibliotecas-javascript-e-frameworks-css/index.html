@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    button {
+      margin-bottom: 20px;
+      
+
+    /* body{
+      margin: 5px ;
+      padding: 5px;
+    }
+
+    .destino {
+      color: black;
+    } */
+
+
+
+  </style>
+</head>
+<body class="container "  >
+  <header class="text-center">
+  <p>
+    <h1>Formulário Concurso TrybeTrip</h1>
+  </p>
+  </header>
+  <main  >
+    <form action="" method="GET">
+      <label for="input-nome-completo">
+        Nome Completo:
+        <input type="text" id="input-nome-completo" name="nome-completo" required placeholder="seu nome completo" minlength="10" maxlength="40"  >
+      </label>
+      <p></p>
+      <label for="input-email">
+        Email
+        <input id="input-email" type="email" name="email" required placeholder="seu email" minlength="20" maxlength="50">
+      </label>
+      <p></p>
+      
+      <div >
+        <p>  Destino preferido </p>
+              
+        <div class="form-check"><label class="form-check-label" for="destino-1">  <input class="form-check-input" id="destino-1" value="cidade" name="destino" type="radio"> </label> Cidade</div>
+        <div class="form-check"><label class="form-check-label" for="destino-2">  <input class="form-check-input" id="destino-2" value="campo" name="destino" type="radio"> </label> Campo</div>
+        <div class="form-check"><label class="form-check-label" for="destino-3">  <input class="form-check-input" id="destino-3" value="praia" name="destino" type="radio"> </label> Praia</div>
+        <div class="form-check"> <label class="form-check-label" for="destino-4">  <input class="form-check-input" id="destino-4" value="montanhas" name="destino" type="radio"> </label> Montanhas</div>
+       
+      </div>
+      <div class="justifica">
+        <label for="justificativa">  
+          <div>
+            <textarea maxlength="500" name="justificativa" id="texto-area" cols="30" rows="10" placeholder="Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?"></textarea> </label>
+          </div>
+      </div>
+          
+         
+      <div><label for="data"> <input id="data" type="date" name="data" id=""> </label>
+      </div>
+      
+            
+      <div class="form-check"> <input type="checkbox" name="" id="oportunidades"class="form-check-input" required> <label class="form-check-label" for="oportunidades">  Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? </label> </div>
+
+      
+      <div class="form-check"> <input type="checkbox" name="" id="aceita-termos"class="form-check-input" required> <label class="form-check-label" for="aceita-termos">  Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. </label></div>
+
+      
+
+      <button class='btn btn-light' id="enviar" type="submit">enviar</button>
+      <button class= 'btn btn-light' type="reset">apagar</button>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
