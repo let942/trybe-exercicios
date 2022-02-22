@@ -1,4 +1,5 @@
-<!-- 1 O formulário deverá permitir que o usuário insira os seguintes campos:
+<!-- 
+✅ 1 O formulário deverá permitir que o usuário insira os seguintes campos:
 Nome Completo:
 Limitado entre 10 e 40 caracteres.
 E-mail:
@@ -16,6 +17,12 @@ Agora vamos utilizar um pouco de javascript, para isso crie o arquivo script.js 
 Dica: Coloque a tag <script> no final do seu body.
 3 Interrompa o comportamento padrão do botão submit utilizando o método preventDefault() . Nossa amiga Carol Silva nos contou um pouco sobre como fazer isso, lembra?
 4 Crie um botão que limpe as informações contidas nos campos; -->
+
+<!--Bônus
+1. A TrybeTrip precisa muito de fotos para divulgar seus concursos. Tendo isso em mente, faça com que somente quem autorizar o uso de imagens possa enviar suas informações.
+2. Faça a validação dos campos com limite de caracteres. Caso não estejam dentro do esperado ao clicar no botão de submit, um alerta deve ser mostrado com a mensagem: 'Dados Inválidos'. Caso contrário, a mensagem 'Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.' deverá aparecer na tela.
+
+-->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,7 +43,7 @@ Dica: Coloque a tag <script> no final do seu body.
     }
 
     .destino {
-      color: blueviolet;
+      color: black;
     }
 
 
@@ -69,18 +76,26 @@ Dica: Coloque a tag <script> no final do seu body.
         <label for="destino-4">  <input id="destino-4" value="montanhas" name="destino" type="radio"> </label> Montanhas
       </div>
       <div class="justifica">
-        <label for="justificativa"> Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? <textarea maxlength="500" name="justificativa" id="" cols="30" rows="10"></textarea> </label>
+        <label for="justificativa">  
+          <div>
+            <textarea maxlength="500" name="justificativa" id="" cols="30" rows="10" placeholder="Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?"></textarea> </label>
+          </div>
+      </div>
+          
+         
+      <div><label for="data"> <input id="data" type="date" name="data" id=""> </label>
       </div>
       
-      <label for="data"> <input id="data" type="date" name="data" id=""> </label>
+      <div><label for="oportunidades"> <input type="checkbox" name="" id="oportunidades"> Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+      </label></div>
       
-      <label for="oportunidades"> <input type="checkbox" name="" id="oportunidades"> Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
-      </label>
-      <label for="aceita-termos"> <input type="checkbox" name="" id="aceita-termos"> Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. </label>
+      <div>  <label for="aceita-termos"> <input type="checkbox" name="" id="aceita-termos"> Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. </label></div>
+    
 
       
 
-      <button type="submit"></button>
+      <button type="submit">enviar</button>
+      <button type="reset">apagar</button>
     </form>
   </main>
 </body>
