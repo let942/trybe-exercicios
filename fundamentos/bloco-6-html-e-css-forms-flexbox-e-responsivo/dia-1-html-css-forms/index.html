@@ -1,3 +1,22 @@
+<!-- 1 O formulário deverá permitir que o usuário insira os seguintes campos:
+Nome Completo:
+Limitado entre 10 e 40 caracteres.
+E-mail:
+Limitado entre 10 e 50 caracteres.
+Destino Preferido:
+4 opções: Cidade, Campo, Praia, Montanhas.
+Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+Limite de 500 caracteres.
+Qual a melhor data para realizar sua viagem?
+Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+Esses serão os principais campos utilizadas nos próximos exercícios.
+2 Crie um botão para enviar as informações preenchidas.
+Agora vamos utilizar um pouco de javascript, para isso crie o arquivo script.js e o referencie no HTML.
+Dica: Coloque a tag <script> no final do seu body.
+3 Interrompa o comportamento padrão do botão submit utilizando o método preventDefault() . Nossa amiga Carol Silva nos contou um pouco sobre como fazer isso, lembra?
+4 Crie um botão que limpe as informações contidas nos campos; -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,6 +24,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 2px;
+    }
+
+    body{
+      margin: 5px ;
+      padding: 5px;
+    }
+
+    .destino {
+      color: blueviolet;
+    }
+
+
+
+  </style>
 </head>
 <body>
   <header>
@@ -14,21 +51,35 @@
     <form action="" method="GET">
       <label for="input-nome-completo">
         Nome Completo:
-        <input type="text" id="input-nome-completo" name="nome-completo" required placeholder="seu nome completo">
+        <input type="text" id="input-nome-completo" name="nome-completo" required placeholder="seu nome completo" minlength="10" maxlength="40"  >
       </label>
       <p></p>
       <label for="input-email">
         Email
-        <input id="input-email" type="email" name="email" required placeholder="seu email">
+        <input id="input-email" type="email" name="email" required placeholder="seu email" minlength="20" maxlength="50">
       </label>
       <p></p>
-      <label for="">
-        Destino preferido
-        <input type="radio">
-        <input type="radio">
-        <input type="radio">
-        <input type="radio">
+      
+      <div class="destino">
+        <p>  Destino preferido </p>
+              
+        <label for="destino-1">  <input id="destino-1" value="cidade" name="destino" type="radio"> </label> Cidade
+        <label for="destino-2">  <input id="destino-2" value="campo" name="destino" type="radio"> </label> Campo
+        <label for="destino-3">  <input id="destino-3" value="praia" name="destino" type="radio"> </label> Praia 
+        <label for="destino-4">  <input id="destino-4" value="montanhas" name="destino" type="radio"> </label> Montanhas
+      </div>
+      <div class="justifica">
+        <label for="justificativa"> Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? <textarea maxlength="500" name="justificativa" id="" cols="30" rows="10"></textarea> </label>
+      </div>
+      
+      <label for="data"> <input id="data" type="date" name="data" id=""> </label>
+      
+      <label for="oportunidades"> <input type="checkbox" name="" id="oportunidades"> Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
       </label>
+      <label for="aceita-termos"> <input type="checkbox" name="" id="aceita-termos"> Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. </label>
+
+      
+
       <button type="submit"></button>
     </form>
   </main>
