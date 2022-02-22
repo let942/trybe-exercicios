@@ -19,8 +19,8 @@ Dica: Coloque a tag <script> no final do seu body.
 ✅ 4 Crie um botão que limpe as informações contidas nos campos; -->
 
 <!--Bônus
-1. A TrybeTrip precisa muito de fotos para divulgar seus concursos. Tendo isso em mente, faça com que somente quem autorizar o uso de imagens possa enviar suas informações.
-2. Faça a validação dos campos com limite de caracteres. Caso não estejam dentro do esperado ao clicar no botão de submit, um alerta deve ser mostrado com a mensagem: 'Dados Inválidos'. Caso contrário, a mensagem 'Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.' deverá aparecer na tela.
+✅ 1. A TrybeTrip precisa muito de fotos para divulgar seus concursos. Tendo isso em mente, faça com que somente quem autorizar o uso de imagens possa enviar suas informações.
+✅ 2. Faça a validação dos campos com limite de caracteres. Caso não estejam dentro do esperado ao clicar no botão de submit, um alerta deve ser mostrado com a mensagem: 'Dados Inválidos'. Caso contrário, a mensagem 'Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.' deverá aparecer na tela.
 
 -->
 
@@ -69,11 +69,15 @@ Dica: Coloque a tag <script> no final do seu body.
       
       <div class="destino">
         <p>  Destino preferido </p>
-              
-        <label for="destino-1">  <input id="destino-1" value="cidade" name="destino" type="radio"> </label> Cidade
-        <label for="destino-2">  <input id="destino-2" value="campo" name="destino" type="radio"> </label> Campo
-        <label for="destino-3">  <input id="destino-3" value="praia" name="destino" type="radio"> </label> Praia 
-        <label for="destino-4">  <input id="destino-4" value="montanhas" name="destino" type="radio"> </label> Montanhas
+        <!-- 
+        label: precisa ter como for o id do input ps: o 'texto' deve ficar dentro do label
+        name: igual para todos
+        value: o valor que será salvo
+            -->
+        <label for="destino-1">  <input id="destino-1" value="cidade" name="destino" type="radio"> Cidade </label> 
+        <label for="destino-2">  <input id="destino-2" value="campo" name="destino" type="radio"> Campo </label> 
+        <label for="destino-3">  <input id="destino-3" value="praia" name="destino" type="radio"> Praia  </label> 
+        <label for="destino-4">  <input id="destino-4" value="montanhas" name="destino" type="radio"> Montanhas </label> 
       </div>
       <div class="justifica">
         <label for="justificativa">  
