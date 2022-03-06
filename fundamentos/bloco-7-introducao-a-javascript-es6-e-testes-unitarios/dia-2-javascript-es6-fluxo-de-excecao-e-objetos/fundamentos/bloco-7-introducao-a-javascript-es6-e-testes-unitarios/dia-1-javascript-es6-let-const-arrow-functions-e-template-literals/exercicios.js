@@ -137,7 +137,7 @@ function fraseComplexa(parametro) {
   let result = (criaFrase(parametro));
 
   const myMainSkills = mainSkills.sort().toString().replace(/,/g, ', ');
-  // que orgulho dessa linha gigante mas que funciona
+  // que orgulho dessa linha gigante mas que funciona  😎
 
 
   return `${result} Minhas cinco principais habilidades são ${myMainSkills}  #goTrybe`;
