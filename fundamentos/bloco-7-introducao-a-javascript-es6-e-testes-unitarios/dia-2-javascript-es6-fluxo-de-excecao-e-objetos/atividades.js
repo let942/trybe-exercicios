@@ -19,3 +19,15 @@
 
 
 // ------------------------------
+
+
+function objetoPessoa(nome, idade) {
+  return {
+    nome: nome,
+    idade: idade
+  }
+}
+
+console.log(objetoPessoa('Letícia', 26));
+
+const objetoPessoa = (nome, idade) => ({ nome: nome, idade: idade });
