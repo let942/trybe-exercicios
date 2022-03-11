@@ -73,7 +73,7 @@ const castSpell = () => {
 
 // 1 - Crie a primeira HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem warrior . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor da chave damage do warrior .
 
-const gameActions = (callback) => {
+const gameActions1 = (callback) => {
   const warriorDamagenow = callback();
   warrior.damage = warriorDamagenow;
   dragon.healthPoints = dragon.healthPoints - warriorDamagenow;
@@ -122,16 +122,36 @@ const gameActions3 = (callback) => {
 // console.log(dragon);
 
 // 4 - Adicione ao objeto gameActions uma função que retorne o objeto battleMembers atualizado e faça um console.log para visualizar o resultado final do turno.
+//Me desafiando a fazer igual o bônus
 
-const gameActions4 = () => {
-  gameActions(warriorDamage)
-  // gameActions2(castSpell());
-  // gameActions3(dragonDamage());
+const gameActions = {
+  warriorTurn: (warriorDamage) => {
+    const warriorDamagenow = callback();
+    warrior.damage = warriorDamagenow;
+    dragon.healthPoints = dragon.healthPoints - warriorDamagenow;
+    console.log(warriorDamagenow);
+  },
+  mageTurn: (mageDamage) => {
+    const callbackResult = callback();
+    const mageDamageNow = callbackResult.dano;
+    const castManna = callbackResult.mana;
 
-  console.log(warrior);
-  console.log(mage);
-  console.log(dragon);
-
+    if (typeof mageDamageNow === 'number') {
+      dragon.healthPoints = dragon.healthPoints - mageDamageNow
+      mage.mana = mage.mana - castManna;
+    }
+  },
+  dragonTurn: (dragonDamage) => {
+    const dragonDamageNow = callback();
+    mage.healthPoints = mage.healthPoints - dragonDamageNow;
+    warrior.healthPoints = warrior.healthPoints - dragonDamageNow;
+    dragon.damage = dragonDamageNow;
+    console.log(dragonDamageNow);
+  }
 };
 
-console.log(gameActions());
+gameActions.warriorTurn(warriorDamage);
+gameActions.mageTurn(mageDamage);
+gameActions.dragonTurn(dragonDamage);
+
+
